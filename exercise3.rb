@@ -3,8 +3,10 @@ user_name = gets.chomp
 puts "Hello, #{user_name}"
 
 puts "How old are you?"
-age = gets
-puts "Wow you're #{age}years old?!?!"
+age = gets.chomp
+puts "Wow you were #{2018 - age.to_i} born in!"
+
+
 
 puts "Where are you from?"
 location = gets.chomp
