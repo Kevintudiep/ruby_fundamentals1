@@ -12,12 +12,12 @@ until false
   elsif user_action == "run"
     distance += 5
     energy -= 4
-  elsif user_action == "go home"
-    return true
-  elsif energy <= 0
-    puts("No more energy!!")
-  else
+  # elsif user_action == "go home"
+  #   return true
+  elsif
     puts("try walk or run!")
+  else energy == 0
+    return true
   end
   puts("Distance from home is #{distance}km, energy is at #{energy}")
 end

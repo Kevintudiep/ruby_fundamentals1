@@ -3,17 +3,19 @@ travel = 0
 energy = 100
 
 
+
 until false
   puts "Do you want to walk or run?"
   user_action = gets.chomp
-  if user_action == "walk".downcase
+  if energy <= 0.abs
+    puts "no energy"
+    return false
+  elsif user_action == "walk".downcase
     travel += 1
     energy += 10
   elsif user_action == "run".downcase
     travel += 5
     energy -= 20
-  elsif energy <= 0.abs
-    return true
   elsif user_action == "go home"
     return true
   else
